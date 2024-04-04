@@ -13,6 +13,10 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
+	/*To correct my output, I added this base case for the leaf node*/
+	if (!tree->left && !tree->right)
+		return (0);
+
 	else
 	{
 		leftside_oftree = binary_tree_height(tree->left);
